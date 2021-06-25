@@ -6,4 +6,7 @@
   <packaging>pom</packaging>
   <name>mybatis</name>
   <description>MULTI MODULES PROJECT FOR MYBATIS</description>
+  <modules>
+  	<module>mybatis-application</module>
+  </modules>
 </project>
