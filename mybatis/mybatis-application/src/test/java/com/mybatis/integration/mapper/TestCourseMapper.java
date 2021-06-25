@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
 @Slf4j
-public class CourseMapperTest {
+public class TestCourseMapper {
 
 	@Autowired
 	private CourseMapper courseMapper;
