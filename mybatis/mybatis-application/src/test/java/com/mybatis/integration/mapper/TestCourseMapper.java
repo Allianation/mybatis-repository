@@ -1,5 +1,7 @@
 package com.mybatis.integration.mapper;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -8,11 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.mybatis.integration.model.CourseModel;
 
-import lombok.extern.slf4j.Slf4j;
-
 @SpringBootTest
-@Slf4j
-public class TestCourseMapper {
+class TestCourseMapper {
 
 	@Autowired
 	private CourseMapper courseMapper;
@@ -22,11 +21,8 @@ public class TestCourseMapper {
 		
 		List<CourseModel> courses = courseMapper.getCourses();
 		
-		for (CourseModel courseModel: courses) {
-			
-			log.info(courseModel.toString());
-		}
-
+		 assertEquals(2, courses.size());
+	  
 	}
 
 }
