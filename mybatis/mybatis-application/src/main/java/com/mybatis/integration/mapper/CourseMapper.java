@@ -9,6 +9,7 @@ import com.mybatis.integration.model.CourseModel;
 @Mapper
 public interface CourseMapper {
  
-    List<CourseModel> getCourses();
+    List<CourseModel> findCourses();
+    List<CourseModel> findByCredits(Long credits);
     
 }

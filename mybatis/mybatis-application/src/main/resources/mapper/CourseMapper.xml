@@ -4,8 +4,24 @@
 
 <mapper namespace="com.mybatis.integration.mapper.CourseMapper">
 
-	<select id="getCourses" resultType="com.mybatis.integration.model.CourseModel">
-		select * from courses
+	<select 
+		id="findCourses" 
+		resultType="com.mybatis.integration.model.CourseModel">
+			SELECT
+				name,
+				credits
+			FROM courses
+	</select>
+
+	<select 
+		id="findByCredits"
+		resultType="com.mybatis.integration.model.CourseModel"
+		parameterType="java.lang.Long">
+			SELECT
+				name,
+				credits
+			FROM courses
+			WHERE credits = #{credits, jdbcType=DECIMAL}
 	</select>
 
 </mapper>

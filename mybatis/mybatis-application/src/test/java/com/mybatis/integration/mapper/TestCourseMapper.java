@@ -19,7 +19,7 @@ class TestCourseMapper {
 	@Test
 	void getData() throws Exception {
 		
-		List<CourseModel> courses = courseMapper.getCourses();
+		List<CourseModel> courses = courseMapper.findCourses();
 		
 		 assertEquals(2, courses.size());
 	  
